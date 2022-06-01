@@ -2,10 +2,23 @@
 
 @section('content')
 
-<ul>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Description</th>
+    </tr>  
     @foreach($products as $product)
-        <li><a href="/products/{{ $product->id }}">{{ $product->make }}</a></li>
+        <tr>
+            <td>{{ $product->id }}</td>
+            <td>{{ $product->make }}</td>
+            <td>{{ $product->model }}</td>
+            <td>{{ $product->description }}</td>
+        </tr>
     @endforeach
-</ul>
+</table>
+
 
 @endsection
