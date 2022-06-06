@@ -18,7 +18,7 @@
             <td>{{ $product->make }}</td>
             <td>{{ $product->model }}</td>
             <td>{{ $product->description }}</td>
-            <td id="param{{ $product->id }}" onclick="selectCell(this.id)"></td>
+            <td contenteditable="true" id="param{{ $product->id }}" onclick="selectCell(this.id)"></td>
         </tr>
     @endforeach
 </table>
