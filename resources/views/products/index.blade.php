@@ -18,16 +18,36 @@
             <td>{{ $product->make }}</td>
             <td>{{ $product->model }}</td>
             <td>{{ $product->description }}</td>
-            <td id="param{{ $product->id }}" onclick="paramInsert()"></td>
+            <td id="param{{ $product->id }}" onclick="selectCell(this.id)"></td>
         </tr>
     @endforeach
 </table>
+
+<script>
+    function selectCell(clicked_id) {
+        document.getElementById(clicked_id).innerHTML = clicked_id;
+    }
+</script>
+
+<!--
+<br>
+<br>
+<button id="1" onClick="reply_click(this.id)">B1</button>
+<button id="2" onClick="reply_click(this.id)">B2</button>
+<button id="3" onClick="reply_click(this.id)">B3</button>
+<p id="response"></p>
+    
+<script type="text/javascript">
+  function reply_click(clicked_id)
+  {
+      document.getElementById("response").innerHTML = clicked_id;
+  }
+</script>
 
 <script>
     function paramInsert() {
         document.getElementById("param{{ $product->id }}").innerHTML = "Hello World";
     }
 </script>
-
-
+-->
 @endsection
