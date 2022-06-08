@@ -23,12 +23,11 @@
                 title="Edit parameters"
                 data-bs-content=
                     "
-                        <div id='pop{{ $product->id }}'>Hello</div>
+                    Hello
                     "
                 contenteditable="true"
                 id="param{{ $product->id }}"
-                onclick="selectParamCell(this.id)"></td>
-            
+                onclick="selectParamCell(this.id)"></td>              
         </tr>
     @endforeach
 </table>
@@ -36,10 +35,7 @@
 <script>
     function selectParamCell(clicked_id) {
         document.getElementById(clicked_id).innerHTML = clicked_id;
-        let $popid = "pop" + clicked_id;
-        document.getElementById($popid).innerHTML = $popid;
     }
-
 </script>
 <br>
 
