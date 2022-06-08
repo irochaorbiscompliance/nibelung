@@ -20,10 +20,10 @@
             <td>{{ $product->description }}</td>
             <td id="param{{ $product->id }}">
                 <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="switchRF{{ $product->id }}" onclick="selectRFSwitch(this.id)"> <span>Radio Frequency</span>
+                    <input class="form-check-input" type="checkbox" role="switch" id="rfSwitch{{ $product->id }}" onclick="selectSwitch(this.id)"> <span>Radio Frequency</span>
                  </div>
                 <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="safety{{ $product->id }}"> <span>Electrical Safety</span>
+                    <input class="form-check-input" type="checkbox" role="switch" id="safetySwitch{{ $product->id }}"onclick="selectSwitch(this.id)"> <span>Electrical Safety</span>
                 </div>
             </td>              
         </tr>
@@ -31,8 +31,10 @@
 </table>
 
 <script>
-    function selectRFSwitch(clicked_id) {
-
+    function selectSwitch(clicked_id) {
+        console.log(clicked_id);
+        var xhr = new XMLHttpRequest();
+        console.log(xhr);
     }
 </script>
 <br>
