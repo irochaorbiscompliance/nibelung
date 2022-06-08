@@ -33,8 +33,10 @@
 <script>
     function selectSwitch(clicked_id) {
         console.log(clicked_id);
+        // Create XHR Object
         var xhr = new XMLHttpRequest();
-        console.log(xhr);
+        //console.log(xhr);
+        
     }
 </script>
 <br>
